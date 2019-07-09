@@ -35,8 +35,11 @@ public class MainActivity extends AppCompatActivity {
 //        androidArray.add("KitKat - 4.4 - 4.4.4");
 //        androidArray.add("Jelly Bean - 4.1 - 4.3.1");
 
-        ArrayAdapter<AndroidVersion> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, androidArray);
+        CustomAdapter adapter = new CustomAdapter(MainActivity.this, R.layout.row, androidArray);
         androidLv.setAdapter(adapter);
+
+//        ArrayAdapter<AndroidVersion> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, androidArray);
+//        androidLv.setAdapter(adapter);
 
     }
 }
